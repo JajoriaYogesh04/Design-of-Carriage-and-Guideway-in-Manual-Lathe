@@ -86,7 +86,7 @@ This project replicates real-world design decision-making — combining material
 
 - **Static analysis** verified that stresses remain within allowable limits under operational loads.
 - **Buckling analysis** confirmed the selected lead screw diameter is safe against axial compression.
-- Maximum observed deflection and stress values from simulation matched analytical predictions closely.
+- Maximum observed deflection and stress values from the simulation matched analytical predictions closely.
 
 ---
 
@@ -110,23 +110,18 @@ This project replicates real-world design decision-making — combining material
 ---
 
 ## 📸 Project Gallery  
-
-> 📌 Add images/screenshots of your models and simulation results here  
-
-- `/images/lathe_assembly.png`
-- `/images/carriage_design.png`
-- `/images/leadscrew_analysis.png`
-- `/images/static_simulation.png`
-- `/images/buckling_simulation.png`
-- `/images/matlab_force_calc.png`
-
+- `lathe_assembly.png`
+- `Stress.png`
+- `Displacement.png`
+- `Strain.png`
+- `buckling_simulation.png`
 ---
 
 ## 🚀 Future Work  
 
-- Extend design for CNC automation integration  
+- Extend the design for CNC automation integration  
 - Perform full dynamic FEA under real cutting cycles  
-- Optimize material selection based on cost-performance trade-offs  
+- Optimise material selection based on cost-performance trade-offs  
 - Develop a digital twin prototype of the entire lathe assembly  
 
 ---
@@ -134,8 +129,8 @@ This project replicates real-world design decision-making — combining material
 ## 📞 Contact  
 
 For queries, ideas, or collaboration:
-- Yogesh (B22ME073)  
-- Sonal (B22ME062)  
+- Yogesh
+- Sonal : sonalraj8453@gmail.com
 - Or open an issue on this repository.
 
 ---
