@@ -111,10 +111,16 @@ This project replicates real-world design decision-making — combining material
 
 ## 📸 Project Gallery  
 - `lathe_assembly.png`
+  ![lathe_assembly](https://github.com/user-attachments/assets/84d39123-44f0-44a8-9345-128bb1f90f7d)
 - `Stress.png`
+![Stress](https://github.com/user-attachments/assets/769c287b-94f3-40c1-813b-c8024df8640e)
 - `Displacement.png`
+![Displacement](https://github.com/user-attachments/assets/d1d1e065-1a4c-4115-b639-84720cb1b43a)
 - `Strain.png`
+![Strain](https://github.com/user-attachments/assets/e5d1e50c-9289-4674-95c2-dc4881dac709)
 - `buckling_simulation.png`
+![buckling_simulation](https://github.com/user-attachments/assets/aaf2359d-4635-4582-8749-5e15faf45293)
+
 ---
 
 ## 🚀 Future Work  
