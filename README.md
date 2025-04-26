@@ -1,8 +1,4 @@
 # 🛠️ Lathe Carriage, Guideways & Lead Screw Structural Design and Simulation
-
-**Mentor:** Dr. Hirshikesh, IIT Jodhpur  
-**Contributors:** Yogesh (B22ME073), Sonal (B22ME062)
-
 ---
 
 ## 📌 Project Overview
