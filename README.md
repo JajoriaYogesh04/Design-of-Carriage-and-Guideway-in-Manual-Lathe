@@ -1,85 +1,142 @@
-# 🛠️ Lathe Machine Design Project
+# 🛠️ Lathe Carriage, Guideways & Lead Screw Structural Design and Simulation
 
-This project focuses on the **design and modeling of a manual lathe machine**, including key components like the **carriage**, **bed**, **headstock**, **tailstock**, and cutting tool assembly. The primary goal is to understand functional requirements and determine general dimensions suitable for small to medium-sized lathes.
-
----
-
-## 📐 Project Overview
-
-The manual lathe is one of the most fundamental machine tools used in workshops for:
-- Turning
-- Facing
-- Threading
-- Drilling
-- Parting
-- Knurling
-
-This project includes:
-- Component-wise dimension study
-- 3D CAD design of the lathe assembly
-- Tool-workpiece interaction analysis
-- Reference dimension collection
+**Mentor:** Dr. Hirshikesh, IIT Jodhpur  
+**Contributors:** Yogesh (B22ME073), Sonal (B22ME062)
 
 ---
 
-## 📏 Key Design Focus: Carriage
+## 📌 Project Overview
 
-The **carriage** supports and moves the cutting tool. It includes:
-- Saddle
-- Cross slide
-- Compound rest
-- Tool post
+This project focuses on the **design, structural analysis, and simulation of a manual lathe machine’s carriage, guideways, and lead screw system** — core components responsible for precise tool positioning during machining.  
 
-### General Carriage Dimensions:
-| Parameter | Range |
-|----------|--------|
-| Length   | 300 – 700 mm |
-| Width    | 150 – 300 mm |
-| Height   | 100 – 250 mm |
+Our goal was to understand how these elements behave under actual machining forces (cutting forces, weight, reaction moments) and ensure that they meet safety and functional standards through both analytical and simulation-based validations.
 
-> Dimensions vary based on overall lathe size and bed width.
-
-### Tool Cutting Point Alignment:
-- The cutting tool should be aligned with the **spindle centerline**.
-- Distance between tool center and actual cutting point should ideally be **0 mm**, with an allowable error of ±0.1 mm.
+This included:
+- Deriving load equilibrium conditions  
+- Calculating contact and axial forces  
+- Assessing stress concentration at guideway junctions  
+- Designing a lead screw resistant to both torsional and buckling failure  
+- Validating the entire system using SolidWorks static and buckling simulations  
+- Cross-verifying calculations with custom MATLAB scripts  
 
 ---
 
-## 🔩 Other Major Components
+## 📐 Why This Matters
 
-- **Headstock**: Contains motor and spindle
-- **Tailstock**: Used for support and drilling
-- **Bed**: Foundation of the lathe
-- **Chuck**: Holds the rotating workpiece
+In any lathe machine, ensuring the **carriage and lead screw assembly can withstand cutting loads without excessive deformation or buckling is essential** for precision and operator safety. 
 
----
-
-## 📚 References
-
-- [Sherline Tools – Standard Dimensions](https://www.sherline.com/standard-dimensions-of-sherline-tools/)
-- [Taig Micro Lathe Specs](https://taigtools.com/product/micro-lathe-ii-l1017/)
-- [American Machine Tools – How to Use a Lathe](https://www.americanmachinetools.com/how_to_use_a_lathe.htm)
+This project replicates real-world design decision-making — combining material selection, dimensioning, stress analysis, and simulation — reflecting practical mechanical engineering challenges.
 
 ---
 
-## 🧰 Tools Used
+## 📊 Project Breakdown
 
-- CAD Software: Fusion 360 / SolidWorks (use as applicable)
-- Technical Reference Sites
-- Manual Measurements and Technical Drawings
-
----
-
-## 📎 Future Scope
-
-- CNC adaptation of design
-- FEA for stress testing under load
-- Material selection and BOM generation
-- Integration into a digital twin system
+### 🔧 Components Designed & Analyzed
+- **Carriage**: Supports tool post, compound rest, and cross-slide; designed for optimal stiffness.
+- **Guideways**: Ensures smooth, accurate carriage motion while withstanding reaction and cutting forces.
+- **Lead Screw**: Transmits motion to the carriage; designed for torsional and buckling resistance.
+- **Lathe Bed, Tool Holder, Cutting Tool**: Modeled for completeness and load distribution accuracy.
 
 ---
 
-## 📩 Contact
+## 📏 Key Design Parameters
 
-For questions or collaboration, reach out via GitHub Issues or email.
+| Parameter         | Value / Range |
+|:-----------------|:---------------|
+| Carriage weight    | 2000 N         |
+| Cutting forces (Fx, Fy, Fz) | (500 N, 800 N, 4000 N) |
+| Bed length         | 0.76 m         |
+| Lead screw lead    | 3.175 mm       |
+| Contact angle      | 45°            |
+| Friction coefficient | 0.1          |
+
+---
+
+## 📝 What We Did
+
+✔️ Developed 3D models for the carriage, guideways, lead screw, and associated parts in **SolidWorks**  
+✔️ Derived force equilibrium relations to compute contact forces at guideways (F1, F2, F3)  
+✔️ Analyzed notch stresses and stress concentration factors at the V-guide junction  
+✔️ Designed lead screw dimensions based on:
+- Torsional strength (from cutting forces and torque requirement)
+- Buckling resistance (using Euler’s theory with fixed–fixed end conditions)
+✔️ Wrote custom **MATLAB scripts** to compute analytical values for:
+- Normal forces  
+- Lead screw safe diameters under torsion and buckling  
+- Factor of safety for each component  
+✔️ Ran **SolidWorks simulations** for:
+- Static stress analysis  
+- Buckling analysis of the lead screw under axial loads  
+
+---
+
+## 📐 Materials Used and Why
+
+| Component       | Material            | Why We Chose It |
+|:----------------|:-------------------|:----------------------------------------------------------|
+| Lathe Bed        | FG200 (Grey Cast Iron) | Great vibration damping and compressive strength |
+| Carriage & Guideways | FG260 (High-Grade Cast Iron) | Higher hardness, wear resistance, and sliding properties |
+| Lead Screw       | ANSI 1045 (Medium Carbon Steel) | Good tensile strength and machinability |
+| Tool Holder      | Cast Alloy Steel     | High toughness and wear resistance under cutting loads |
+| Cutting Tool     | HSS (High-Speed Steel) | Retains hardness at elevated temperatures |
+
+---
+
+## 📊 Simulation Highlights  
+
+- **Static analysis** verified that stresses remain within allowable limits under operational loads.
+- **Buckling analysis** confirmed the selected lead screw diameter is safe against axial compression.
+- Maximum observed deflection and stress values from simulation matched analytical predictions closely.
+
+---
+
+## 📊 Final Design Outcome  
+
+- **Lead screw safe diameter**:
+  - Torsion: 7.7 mm  
+  - Buckling: 15 mm  
+  - Final chosen: 20 mm (with safety factor)  
+- **Guideway-contact normal forces** computed for cutting and reaction conditions  
+- **Carriage structure verified for both static and dynamic stability**
+
+---
+
+## 📚 Tools & Technologies
+
+- 📐 SolidWorks (3D Modeling, Static & Buckling Simulation)
+- 📊 MATLAB (Analytical Calculations, Design Verification)
+- 📝 Structural Mechanics, Machine Design Principles
+
+---
+
+## 📸 Project Gallery  
+
+> 📌 Add images/screenshots of your models and simulation results here  
+
+- `/images/lathe_assembly.png`
+- `/images/carriage_design.png`
+- `/images/leadscrew_analysis.png`
+- `/images/static_simulation.png`
+- `/images/buckling_simulation.png`
+- `/images/matlab_force_calc.png`
+
+---
+
+## 🚀 Future Work  
+
+- Extend design for CNC automation integration  
+- Perform full dynamic FEA under real cutting cycles  
+- Optimize material selection based on cost-performance trade-offs  
+- Develop a digital twin prototype of the entire lathe assembly  
+
+---
+
+## 📞 Contact  
+
+For queries, ideas, or collaboration:
+- Yogesh (B22ME073)  
+- Sonal (B22ME062)  
+- Or open an issue on this repository.
+
+---
 
