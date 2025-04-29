@@ -99,7 +99,7 @@ This project replicates real-world design decision-making — combining material
 
 ## 📚 Tools & Technologies
 
-- 📐 SolidWorks (3D Modeling, Static & Buckling Simulation)
+- 📐 SolidWorks (3D Modeling, Static, Fattigue & Buckling Simulation)
 - 📊 MATLAB (Analytical Calculations, Design Verification)
 - 📝 Structural Mechanics, Machine Design Principles
 
