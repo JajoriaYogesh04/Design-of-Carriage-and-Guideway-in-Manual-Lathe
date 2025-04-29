@@ -131,7 +131,7 @@ This project replicates real-world design decision-making — combining material
 ## 📞 Contact  
 
 For queries, ideas, or collaboration:
-- Yogesh
+- Yogesh : b22me073@iitj.ac.in
 - Sonal : sonalraj8453@gmail.com
 - Or open an issue on this repository.
 
